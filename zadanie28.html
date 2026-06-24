@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная работа №6. Формы</title>
+</head>
+
+<body bgcolor="#F5F5F5">
+
+<h1 align="center">HTML - формы</h1>
+
+<hr>
+
+<h2>Форма "Личная"</h2>
+
+<form>
+
+Фамилия:<br>
+<input type="text" name="surname">
+<br><br>
+
+Имя:<br>
+<input type="text" name="name">
+<br><br>
+
+Адрес:<br>
+<input type="text" name="address" size="50">
+<br><br>
+
+Username:<br>
+<input type="text" name="username">
+<br><br>
+
+Password:<br>
+<input type="password" name="password">
+<br><br>
+
+Дата рождения:<br><br>
+
+Число:
+<select name="day">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+</select>
+
+Месяц:
+<input type="month">
+
+Год:
+<input type="number" min="1980" max="2026">
+<br><br>
+
+Интересы:<br>
+<input type="checkbox" name="interest" value="music"> Музыка<br>
+<input type="checkbox" name="interest" value="sport"> Спорт<br>
+<input type="checkbox" name="interest" value="games"> Игры<br>
+<input type="checkbox" name="interest" value="movies"> Фильмы<br><br>
+
+Комментарий:<br>
+<textarea rows="5" cols="50"></textarea>
+<br><br>
+
+<input type="submit" value="Отправить">
+<input type="reset" value="Очистить">
+
+</form>
+
+<br>
+
+<a href="page2.html">Перейти на другую страницу</a>
+
+<hr>
+
+<h2>Зачетная книжка</h2>
+
+<form>
+
+Выберите дисциплины:<br><br>
+
+<select multiple size="4">
+    <option>Web-программирование</option>
+    <option>Базы данных</option>
+    <option>Информатика</option>
+    <option>Математика</option>
+</select>
+
+<br><br>
+
+Оценка:<br>
+
+<input type="radio" name="mark"> Отлично<br>
+<input type="radio" name="mark"> Хорошо<br>
+<input type="radio" name="mark"> Удовлетворительно<br>
+
+<br>
+
+Дополнительно:<br>
+
+<input type="checkbox"> Посещал все занятия<br>
+<input type="checkbox"> Выполнил лабораторные работы<br>
+
+<br><br>
+
+<input type="submit" value="Сохранить">
+<input type="reset" value="Очистить">
+
+</form>
+
+<hr>
+
+<h2>Опрос рынка автомобилей</h2>
+
+<form>
+
+Ваш пол:<br>
+<select>
+    <option>Мужской</option>
+    <option>Женский</option>
+</select>
+
+<br><br>
+
+Какие марки автомобилей вам нравятся?<br>
+
+<input type="checkbox"> BMW<br>
+<input type="checkbox"> Mercedes<br>
+<input type="checkbox"> Toyota<br>
+<input type="checkbox"> Audi<br>
+
+<br>
+
+Какой тип кузова предпочитаете?<br>
+
+<input type="radio" name="car"> Седан<br>
+<input type="radio" name="car"> Кроссовер<br>
+<input type="radio" name="car"> Купе<br>
+
+<br>
+
+Ваш возраст:<br>
+
+<select>
+    <option>18-25</option>
+    <option>26-35</option>
+    <option>36-50</option>
+    <option>50+</option>
+</select>
+
+<br><br>
+
+Комментарий:<br>
+<textarea rows="4" cols="50"></textarea>
+
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Clear">
+
+</form>
+
+</body>
+</html>
+```

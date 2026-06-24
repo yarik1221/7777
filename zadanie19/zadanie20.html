@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Карты изображений (Image Maps)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h2 { color: #333; }
+        p { line-height: 1.6; }
+        img { border: 1px solid #ccc; margin-bottom: 10px; display: block; }
+    </style>
+</head>
+<body>
+
+    <h1>Примеры карт</h1>
+    <p><strong>Изображения карт иллюстрируют способы задания координат областей для переходов</strong></p>
+
+    <!-- Карта 1 (kartal) -->
+    <h2>Карта 1</h2>
+    <p>На этой странице представлены две карты, которые позволяют выполнять различные переходы. 
+    Для правильного функционирования страницы необходимо проверить все ссылки на файлы, заданные с помощью атрибутов src и href.</p>
+    
+    <p>
+        <strong>Щелчок по зеленому кругу</strong> должен обеспечить переход к вашей Web-странице.<br>
+        <strong>Желтый многоугольник</strong> вернет вас на страницу Color.htm (название и коды цветов).
+    </p>
+
+    <!-- Описание карты с именем kartal -->
+    <map name="kartal">
+        <!-- Зеленый круг: shape="circle", coords="x, y, radius" -->
+        <!-- Центр круга (100, 100), радиус 50 -->
+        <area shape="circle" coords="100,100,50" href="index.htm" alt="Главная страница" title="Перейти на главную">
+        
+        <!-- Желтый многоугольник: shape="poly", coords="x1,y1, x2,y2, ..." -->
+        <!-- Координаты вершин многоугольника -->
+        <area shape="poly" coords="150,50, 180,150, 120,180" href="Color.htm" alt="Цвета" title="Перейти к цветам">
+    </map>
+
+    <!-- Изображение, использующее карту kartal -->
+    <!-- Заглушка создает зеленый фон с желтым многоугольником для наглядности -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='100%' height='100%' fill='green'/%3E%3Cpolygon points='150,50 180,150 120,180' fill='yellow' stroke='black'/%3E%3C/svg%3E" 
+         alt="Карта 1" 
+         usemap="#kartal" 
+         width="200" height="200">
+
+    <!-- Разделительный текст -->
+    <hr>
+    <p style="text-align: center; font-weight: bold; color: #555;">Между картами располагается поясняющий текст...</p>
+    <hr>
+
+    <!-- Карта 2 (karta2) -->
+    <h2>Карта 2</h2>
+    <p>Красный прямоугольник (см. ниже) обеспечивает переход в начало этой страницы.</p>
+
+    <!-- Описание карты с именем karta2 -->
+    <map name="karta2">
+        <!-- Красный прямоугольник: shape="rect", coords="x1,y1,x2,y2" -->
+        <!-- Левый верхний угол (50, 50), правый нижний (150, 150) -->
+        <area shape="rect" coords="50,50,150,150" href="#top" alt="Наверх страницы" title="Вернуться к началу">
+    </map>
+
+    <!-- Изображение для второй карты -->
+    <!-- Заглушка создает серый фон с красным прямоугольником -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='100%' height='100%' fill='gray'/%3E%3Crect x='50' y='50' width='100' height='100' fill='red' stroke='black'/%3E%3C/svg%3E" 
+         alt="Карта 2" 
+         usemap="#karta2" 
+         width="200" height="200">
+
+    <!-- Якорь для возврата наверх -->
+    <a name="top"></a>
+
+</body>
+</html>

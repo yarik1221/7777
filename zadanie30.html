@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Опрос пользователя</title>
+
+<script>
+function showMessage() {
+    alert("Спасибо за участие в опросе!");
+}
+</script>
+
+</head>
+
+<body>
+
+<h2>Простой опрос</h2>
+
+<form onsubmit="showMessage(); return false;">
+
+<!-- Поле ввода имени -->
+<p>
+Введите имя:<br>
+<input type="text" name="username" required>
+</p>
+
+<!-- Флажки -->
+<p>
+Что вам больше нравится?
+</p>
+
+<input type="checkbox" name="choice1"> Учиться<br>
+<input type="checkbox" name="choice2"> Отдыхать<br>
+
+<br>
+
+<!-- Кнопка -->
+<input type="submit" value="Отправить">
+
+</form>
+
+</body>
+</html>

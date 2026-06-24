@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3. Форматирование таблицы</title>
+    <style>
+        table {
+            width: 100%;           /* ширина таблицы равна ширине экрана */
+            border-collapse: collapse; /* убирает двойные границы между ячейками */
+            border: 3px solid black;   /* рамка вокруг всей таблицы (по желанию, можно убрать) */
+        }
+
+        td, th {
+            border: 3px solid black; /* границы ячеек толщиной 3 пикселя */
+            padding: 8px;            /* небольшие отступы внутри ячеек для читаемости */
+        }
+
+        /* Цвет фона первого столбца — зелёный */
+        td:first-child, th:first-child {
+            background-color: green;
+        }
+
+        /* Цвет фона второго столбца — красный */
+        td:nth-child(2), th:nth-child(2) {
+            background-color: red;
+        }
+
+        /* Цвет фона третьего столбца — синий */
+        td:nth-child(3), th:nth-child(3) {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Столбец 1</th>
+                <th>Столбец 2</th>
+                <th>Столбец 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Данные 1-1</td>
+                <td>Данные 2-1</td>
+                <td>Данные 3-1</td>
+            </tr>
+            <tr>
+                <td>Данные 1-2</td>
+                <td>Данные 2-2</td>
+                <td>Данные 3-2</td>
+            </tr>
+            <tr>
+                <td>Данные 1-3</td>
+                <td>Данные 2-3</td>
+                <td>Данные 3-3</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

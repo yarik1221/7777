@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Современное решение: Бегущие строки</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        
+        /* Имитация фреймов через Flexbox */
+        .container {
+            display: flex;
+            height: 100vh; /* На всю высоту экрана */
+        }
+
+        .frame {
+            flex: 1; /* Равное распределение ширины */
+            padding: 20px;
+            box-sizing: border-box;
+            border-right: 2px solid #333;
+        }
+
+        /* Цвета фонов для разных "кадров" */
+        .frame:nth-child(1) { background-color: #FFEBEE; } /* Светло-красный */
+        .frame:nth-child(2) { background-color: #E8F5E9; } /* Светло-зеленый */
+        .frame:nth-child(3) { background-color: #E3F2FD; } /* Светло-синий */
+
+        /* Стили для бегущих строк (анимация) */
+        .marquee-box {
+            background-color: white;
+            padding: 15px;
+            border: 2px solid black;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .content {
+            display: inline-block;
+            animation: scroll-left 10s linear infinite;
+        }
+        
+        .frame:nth-child(2) .content {
+            animation: scroll-right 10s linear infinite;
+        }
+
+        .frame:nth-child(3) .content {
+            /* Вертикальная прокрутка */
+            display: block; 
+            animation: scroll-up 10s linear infinite;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        @keyframes scroll-left {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        @keyframes scroll-right {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        @keyframes scroll-up {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Кадр 1 -->
+        <div class="frame">
+            <h3>Кадр 1</h3>
+            <div class="marquee-box">
+                <div class="content">Бегущая строка 1: Слева направо</div>
+            </div>
+        </div>
+
+        <!-- Кадр 2 -->
+        <div class="frame">
+            <h3>Кадр 2</h3>
+            <div class="marquee-box">
+                <div class="content">Бегущая строка 2: Справа налево</div>
+            </div>
+        </div>
+
+        <!-- Кадр 3 -->
+        <div class="frame">
+            <h3>Кадр 3</h3>
+            <div class="marquee-box" style="height: 80%;">
+                <div class="content">
+                    Бегущая строка 3:<br>Вертикальное движение<br><br>
+                    Текст будет двигаться вверх.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
